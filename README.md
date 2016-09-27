@@ -43,6 +43,6 @@
 
 ```
 <div id="nativeShare" class="hide"></div>
-···
+```
 
 [<img src="http://365tianzhuan.com/share/share-demo2.png">](http://365tianzhuan.com/share/index2.html).
