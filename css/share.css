@@ -1,0 +1,88 @@
+﻿html{
+    font-size: 325%;
+}
+body{
+    font-size: 0.28rem;
+}
+#nativeShare {font-size: 0.28rem; position: fixed; width: 100%; text-align: center; bottom: 0; z-index: 1; left: 0;height: 100%;background-color: rgba(0,0,0,0.5)}
+
+#nativeShare *{box-sizing: border-box;}
+
+#nativeShare .hide,#nativeShare.hide{display: none;}
+
+#nativeShare:after{display: inline-block; height: 100%; margin-left: -.05em; content: ""; vertical-align: middle; }
+
+#nativeShare>div{/*vertical-align: middle; display: inline-block; background-color: #fff;*/ position: absolute; bottom: 0; width: 100%; background-color: #fff; }
+
+#nativeShare .sharetip{
+    position: fixed;;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+}
+
+#nativeShare .share-error-tip{
+    position: absolute;;
+    height: calc(100% - 0.9rem);
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #fff;
+    padding-top: 1.8rem;
+}
+
+#nativeShare .label {padding: 0.65rem 0; color: #333; }
+
+#nativeShare .list {padding: 0.8rem 0 0.85rem; }
+
+#nativeShare .list div {width: 33.33%; display: inline-block; text-align: center; margin-bottom: 0.4rem;}
+
+#nativeShare .list div i {width: 1.22rem; height: 1.22rem; display: block; margin: 0 auto; margin-bottom: 0.2rem; }
+
+#nativeShare .cancel{line-height: 0.9rem; text-align: center; border-top: 1px solid #e1e1e1; }
+
+#nativeShare .cancel a{display: block; }
+
+#nativeShare .weibo i {background-image: url('./icon/weibo.png'); background-size: cover; }
+
+#nativeShare .weixin i {background-image: url('./icon/weixin_friend.png'); background-size: cover; }
+
+#nativeShare .weixin_timeline i {background-image: url('./icon/weixin.png'); background-size: cover; }
+
+#nativeShare .qq i {background-image: url('./icon/qq.png'); background-size: cover; }
+
+#nativeShare .qzone i {background-image: url('./icon/qqzone.png'); background-size: cover; }
+
+#nativeShare .more i {background-image: url('./icon/more.png'); background-size: cover; }
+
+
+#nativeShare.show{
+    background-color: #fff;
+    position: static;
+}
+
+#nativeShare.show>div{
+    position: static;
+}
+
+#nativeShare.show .list{
+    padding: 0 0.6rem;
+}
+
+#nativeShare.show .list span,#nativeShare.show .cancel {
+    display: none;
+}
+
+#nativeShare.show .list div{
+    width: 12%;
+    margin-left: 2.3333%;
+    margin-right: 2.3333%;
+    margin-bottom: 0;
+}
+
+#nativeShare.show .list div i{
+    width: 100%;
+    height: auto;
+    padding-top: 100%;
+}
