@@ -35,9 +35,8 @@
 ```
 <div id="nativeShare" class="show"></div>
 ```
-示例一
-[id]: http://365tianzhuan.com/share/share-demo1.png "示例一"
 
+[<img src="http://365tianzhuan.com/share/share-demo1.png">](http://365tianzhuan.com/share/index.html).
 
 
 样式二
@@ -45,5 +44,5 @@
 ```
 <div id="nativeShare" class="hide"></div>
 ···
-示例二
-[id]: http://365tianzhuan.com/share/share-demo2.png "示例二"
+
+[<img src="http://365tianzhuan.com/share/share-demo2.png">](http://365tianzhuan.com/share/index2.html).
