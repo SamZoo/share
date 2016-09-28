@@ -1,8 +1,11 @@
 ﻿var i_share = {
-    init: function(){
-        var hrefs = location.search.split(/[=&]/g);
+    init: function(option){
+        var hrefs = location.search.split(/[?=&]/g);
         var index = hrefs.indexOf('fromsharefriend');
         var self = this;
+
+        $.extend(self.shareConfig, option);
+
 
         self.setHtml();
         self.setEvent();
@@ -74,7 +77,7 @@
                             '<i></i>' +
                             '<span>QQ空间</span>' +
                         '</div>' +
-                        '<div data-app="TxWb:2" class="nativeShare more">' +
+                        '<div data-app="TxWb:2" class="nativeShare txwb">' +
                             '<i></i>' +
                             '<span>腾讯微博</span>' +
                         '</div>' +
@@ -87,11 +90,19 @@
         this.$.html(html);
     },
     shareConfig: {
-        title: '1',
-        description: '1',
+        title: '分享',
+        description: '分享',
         url: location.href,
         from: '',
-        imgUrl: ''
+        imgUrl: '',
+        fail: function(){
+            var $et = this.$.find('.share-error-tip').removeClass('hide');
+
+            clearTimeout(this.to);
+            this.to = setTimeout(function(){
+                $et.addClass('hide');
+            },3000);
+        }
     },
     appList: {
         sinaWeibo: ['kSinaWeibo', 'SinaWeibo', 11, '新浪微博'],
@@ -201,13 +212,13 @@
         }else if(A.isFromQQBrower){
             self.qbWxShare(t);
         }else if(A.isFromQQBrowerLight){
-            self.fail.call(self, t);
+            self.shareConfig.fail.call(self, t);
         }else{
             self.isQbInstalled({
                 testUrl: e,
                 onSucc: function() {},
                 onFail: function() {
-                    self.fail.call(self, t);
+                    self.shareConfig.fail.call(self, t);
                     //location.href = self.url.QQBDownload;
                 }
             });
@@ -225,14 +236,6 @@
 
        window.location.href = str;
        this.txShare(t);
-    },
-    fail: function(t){
-        var $et = this.$.find('.share-error-tip').removeClass('hide');
-
-        clearTimeout(this.to);
-        this.to = setTimeout(function(){
-            $et.addClass('hide');
-        },3000);
     }
 };
-i_share.init();
+
