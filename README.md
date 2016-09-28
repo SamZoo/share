@@ -57,7 +57,7 @@ i_share是移动端分享微信、qq等的工具
 [<img src="http://365tianzhuan.com/share/share-demo1.png">](http://365tianzhuan.com/share/index.html).
 
 
-### 样式二
+样式二
 
 ```
 <div id="i_share" class="**hide**"></div>
@@ -66,5 +66,5 @@ i_share是移动端分享微信、qq等的工具
 ### 效果图
 [<img src="http://365tianzhuan.com/share/share-demo4.png">](http://365tianzhuan.com/share/index2.html).
 
-扫码查看示例
+### 扫码查看示例
 [<img src="http://365tianzhuan.com/share/share-demo2.png">](http://365tianzhuan.com/share/index2.html).
