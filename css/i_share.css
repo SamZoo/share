@@ -1,0 +1,90 @@
+﻿html{
+    font-size: 325%;
+}
+body{
+    font-size: 0.28rem;
+}
+#i_share {font-size: 0.28rem; position: fixed; width: 100%; text-align: center; bottom: 0; z-index: 1; left: 0;height: 100%;background-color: rgba(0,0,0,0.5)}
+
+#i_share *{box-sizing: border-box;}
+
+#i_share .hide,#i_share.hide{display: none;}
+
+#i_share:after{display: inline-block; height: 100%; margin-left: -.05em; content: ""; vertical-align: middle; }
+
+#i_share>div{/*vertical-align: middle; display: inline-block; background-color: #fff;*/ position: absolute; bottom: 0; width: 100%; background-color: #fff; }
+
+#i_share .sharetip{
+    position: fixed;;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+}
+
+#i_share .share-error-tip{
+    position: absolute;;
+    height: calc(100% - 0.9rem);
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #fff;
+    padding-top: 1.8rem;
+}
+
+#i_share .label {padding: 0.65rem 0; color: #333; }
+
+#i_share .list {padding: 0.8rem 0 0.85rem; }
+
+#i_share .list div {width: 33.33%; display: inline-block; text-align: center; margin-bottom: 0.4rem;}
+
+#i_share .list div i {width: 1.22rem; height: 1.22rem; display: block; margin: 0 auto; margin-bottom: 0.2rem; }
+
+#i_share .cancel{line-height: 0.9rem; text-align: center; border-top: 1px solid #e1e1e1; }
+
+#i_share .cancel a{display: block; }
+
+#i_share .weibo i {background-image: url('./icon/weibo.png'); background-size: cover; }
+
+#i_share .weixin i {background-image: url('./icon/weixin_friend.png'); background-size: cover; }
+
+#i_share .weixin_timeline i {background-image: url('./icon/weixin.png'); background-size: cover; }
+
+#i_share .qq i {background-image: url('./icon/qq.png'); background-size: cover; }
+
+#i_share .qzone i {background-image: url('./icon/qqzone.png'); background-size: cover; }
+
+#i_share .txwb i {background-image: url('./icon/txwb.png'); background-size: cover; }
+
+#i_share .more i {background-image: url('./icon/more.png'); background-size: cover; }
+
+
+#i_share.show{
+    background-color: #fff;
+    position: static;
+}
+
+#i_share.show>div{
+    position: static;
+}
+
+#i_share.show .list{
+    padding: 0 0.6rem;
+}
+
+#i_share.show .list span,#i_share.show .cancel {
+    display: none;
+}
+
+#i_share.show .list div{
+    width: 12%;
+    margin-left: 2.3333%;
+    margin-right: 2.3333%;
+    margin-bottom: 0;
+}
+
+#i_share.show .list div i{
+    width: 100%;
+    height: auto;
+    padding-top: 100%;
+}

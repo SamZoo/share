@@ -30,11 +30,11 @@
         a.appendChild(d);
         this.QQBrower = true;
     },
-    $: $('#nativeShare'),
+    $: $('#i_share'),
     setEvent: function(){
         var self = this;
 
-        self.$.on('click', '.nativeShare', function(event) {
+        self.$.on('click', '.i_share', function(event) {
             var shareType = $(this).attr('data-app').split(':');
             self[shareType[0] + 'Share'](shareType[1]);
         });
@@ -59,25 +59,25 @@
         var html = '<div>' +
                     '<div class="sharetip hide">点击这里进行分享↑</div>' +
                     '<div class="list clearfix">' +
-                        '<div data-app="tx:1" class="nativeShare weixin"> <i></i>' +
+                        '<div data-app="tx:1" class="i_share weixin"> <i></i>' +
                         '<span>微信好友</span>' +
                         '</div>' +
-                        '<div data-app="tx:8" class="nativeShare weixin_timeline"> <i></i>' +
+                        '<div data-app="tx:8" class="i_share weixin_timeline"> <i></i>' +
                             '<span>微信朋友圈</span>' +
                         '</div>' +
-                        '<div data-app="sinaWeibo" class="nativeShare weibo">' +
+                        '<div data-app="sinaWeibo" class="i_share weibo">' +
                             '<i></i>' +
                             '<span>新浪微博</span>' +
                         '</div>' +
-                        '<div data-app="tx:4" class="nativeShare qq">' +
+                        '<div data-app="tx:4" class="i_share qq">' +
                             '<i></i>' +
                             '<span>QQ好友</span>' +
                         '</div>' +
-                        '<div data-app="tx:3" class="nativeShare qzone">' +
+                        '<div data-app="tx:3" class="i_share qzone">' +
                             '<i></i>' +
                             '<span>QQ空间</span>' +
                         '</div>' +
-                        '<div data-app="TxWb:2" class="nativeShare txwb">' +
+                        '<div data-app="TxWb:2" class="i_share txwb">' +
                             '<i></i>' +
                             '<span>腾讯微博</span>' +
                         '</div>' +
